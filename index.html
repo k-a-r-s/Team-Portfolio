@@ -1,209 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Portfolio</title>
+    <title>Team Portfolio - ENSIA Software Engineering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
         }
-
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-        }
-
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        header p {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            padding: 50px 30px;
-        }
-
-        .team-member {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 40px 20px;
-            text-align: center;
+        
+        .team-card {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(148, 163, 184, 0.2);
             transition: all 0.3s ease;
-            border: 2px solid #e9ecef;
-            cursor: pointer;
+        }
+        
+        .team-card:hover {
+            background: rgba(30, 41, 59, 0.95);
+            border-color: rgba(148, 163, 184, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .member-link {
+            color: #60a5fa;
             text-decoration: none;
-            display: block;
+            font-weight: 600;
+            transition: color 0.3s ease;
         }
-
-        .team-member:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            border-color: #667eea;
-        }
-
-        .member-photo {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5em;
-            color: white;
-            font-weight: bold;
-            border: 5px solid white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .member-name {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-
-        .view-profile {
-            font-size: 0.9em;
-            color: #764ba2;
-            margin-top: 10px;
-            opacity: 0.8;
-        }
-
-        .team-member:hover .view-profile {
-            opacity: 1;
-            font-weight: 500;
-        }
-
-        footer {
-            background: #2d3748;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-        }
-
-        footer p {
-            margin-bottom: 10px;
-        }
-
-        /* Instructions for team members */
-        .instructions {
-            background: #fff3cd;
-            border: 2px solid #ffc107;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 30px;
-            color: #856404;
-        }
-
-        .instructions h3 {
-            margin-bottom: 10px;
-            color: #856404;
-        }
-
-        .instructions ul {
-            margin-left: 20px;
-        }
-
-        .instructions li {
-            margin-bottom: 5px;
+        
+        .member-link:hover {
+            color: #93c5fd;
         }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <header>
-            <h1>Our Amazing Team</h1>
-            <p>Meet the talented individuals behind our success</p>
-        </header>
+    <div class="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h1 class="text-5xl sm:text-6xl font-bold mb-4 text-white">Team Portfolio</h1>
+                <p class="text-xl text-slate-400 mb-2">ENSIA Software Engineering - 3rd Year</p>
+                <p class="text-slate-500">Collaborative Development Project</p>
+            </div>
 
-        <!-- Instructions for team members -->
-        <div class="instructions">
-            <h3>📝 Instructions for Team Members:</h3>
-            <ul>
-                <li>Replace "Member X" with your actual name on this page</li>
-                <li>Create your own detailed page (e.g., member1.html) with your full portfolio</li>
-                <li>Update the href link in your card to point to your page</li>
-                <li>Optional: Replace the initial with an actual photo</li>
-            </ul>
+            <!-- Team Members Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <!-- Member 1 -->
+                <div class="team-card rounded-lg p-8">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full mb-4"></div>
+                        <h2 class="text-2xl font-bold text-white mb-2">Member 1</h2>
+                        <p class="text-slate-400 text-sm">Software Engineer</p>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                        Click to view full profile and technical skills.
+                    </p>
+                    <a href="member1.html" class="member-link inline-flex items-center gap-2">
+                        View Profile →
+                    </a>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="team-card rounded-lg p-8">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full mb-4"></div>
+                        <h2 class="text-2xl font-bold text-white mb-2">Member 2</h2>
+                        <p class="text-slate-400 text-sm">Software Engineer</p>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                        Click to view full profile and technical skills.
+                    </p>
+                    <a href="member2.html" class="member-link inline-flex items-center gap-2">
+                        View Profile →
+                    </a>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="team-card rounded-lg p-8">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-full mb-4"></div>
+                        <h2 class="text-2xl font-bold text-white mb-2">Member 3</h2>
+                        <p class="text-slate-400 text-sm">Software Engineer</p>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                        Click to view full profile and technical skills.
+                    </p>
+                    <a href="member3.html" class="member-link inline-flex items-center gap-2">
+                        View Profile →
+                    </a>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="team-card rounded-lg p-8">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full mb-4"></div>
+                        <h2 class="text-2xl font-bold text-white mb-2">Member 4</h2>
+                        <p class="text-slate-400 text-sm">Software Engineer</p>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                        Click to view full profile and technical skills.
+                    </p>
+                    <a href="member4.html" class="member-link inline-flex items-center gap-2">
+                        View Profile →
+                    </a>
+                </div>
+
+                <!-- Member 5 -->
+                <div class="team-card rounded-lg p-8">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full mb-4"></div>
+                        <h2 class="text-2xl font-bold text-white mb-2">Member 5</h2>
+                        <p class="text-slate-400 text-sm">Software Engineer</p>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                        Click to view full profile and technical skills.
+                    </p>
+                    <a href="member5.html" class="member-link inline-flex items-center gap-2">
+                        View Profile →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="border-t border-slate-700 pt-8 text-center text-slate-500">
+                <p>&copy; 2025 ENSIA Team Portfolio. All rights reserved.</p>
+            </div>
         </div>
-        <div class="team-grid">
-            <!-- pls instead of numbers , use your real names-->
-
-            <a href="dilmi-abderrahmane.html" class="team-member">
-                <div class="member-photo">DA</div>
-                <div class="member-name">Dilmi Abderrahmane</div>
-                <div class="view-profile">Click to view profile →</div>
-            </a>
-            <!-- pls instead of numbers , use your real names-->
-
-            <a href="member2.html" class="team-member">
-                <div class="member-photo">M2</div>
-                <div class="member-name">Member 2</div>
-                <div class="view-profile">Click to view profile →</div>
-            </a>
-            <!-- pls instead of numbers , use your real names-->
-
-            <a href="member3.html" class="team-member">
-                <div class="member-photo">M3</div>
-                <div class="member-name">Member 3</div>
-                <div class="view-profile">Click to view profile →</div>
-            </a>
-            <!-- pls instead of numbers , use your real names-->
-
-            <a href="member4.html" class="team-member">
-                <div class="member-photo">M4</div>
-                <div class="member-name">Member 4</div>
-                <div class="view-profile">Click to view profile →</div>
-            </a>
-            <!-- pls instead of numbers , use your real names-->
-
-            <a href="member5.html" class="team-member">
-                <div class="member-photo">M5</div>
-                <div class="member-name">Member 5</div>
-                <div class="view-profile">Click to view profile →</div>
-            </a>
-        </div>
-
-        <footer>
-            <p>&copy; 2025 Our Team Portfolio</p>
-            <p>Built with ❤️ by our amazing team</p>
-        </footer>
     </div>
 </body>
-
 </html>
