@@ -115,22 +115,26 @@
         }
 
         .profile-badge {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             margin: 0 auto 24px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3em;
-            font-weight: 700;
-            color: white;
             box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
             position: relative;
             z-index: 1;
-            border: 4px solid rgba(255, 255, 255, 0.2);
-            animation: pulse 2s ease-in-out infinite;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            overflow: hidden;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .profile-badge img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         @keyframes pulse {
@@ -360,8 +364,8 @@
             }
 
             .profile-badge {
-                width: 100px;
-                height: 100px;
+                width: 120px;
+                height: 120px;
                 font-size: 2.5em;
             }
 
@@ -404,7 +408,9 @@
     <div class="container">
         <header>
             <a href="index.html">← Back to Team Portfolio</a>
-            <div class="profile-badge">DA</div>
+            <div class="profile-badge">
+                <img src="./assets/abderrahmane.jpg" alt="Dilmi Abderrahmane" onerror="this.style.display='none'; this.parentElement.innerHTML='DA';">
+            </div>
             <h1>Dilmi Abderrahmane</h1>
             <p>Software Developer & Computer Science Student</p>
         </header>
