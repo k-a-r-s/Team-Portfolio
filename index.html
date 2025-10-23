@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Portfolio - ENSIA Software Engineering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+        }
+
+        .team-card {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover {
+            background: rgba(30, 41, 59, 0.95);
+            border-color: rgba(148, 163, 184, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .member-link {
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .member-link:hover {
+            color: #93c5fd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h1 class="text-5xl sm:text-6xl font-bold mb-4 text-white">Team Portfolio</h1>
+                <p class="text-xl text-slate-400 mb-2">ENSIA Software Engineering - 3rd Year</p>
+                <p class="text-slate-500">Collaborative Development Project</p>
+            </div>
+
+            <!-- Team Members Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <!-- Member 1 -->
+                <div class="team-card rounded-lg p-8">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full mb-4 overflow-hidden">
+                            <img src="./assets/abderrahmane.jpg" alt="Dilmi Abderrahmane" class="w-full h-full object-cover">
+                        </div>
+                        <h2 class="text-2xl font-bold text-white mb-2">Dilmi Abderrahmane</h2>
+                        <p class="text-slate-400 text-sm">Software Developer & Computer Science Student</p>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                        Passionate computer science student with strong foundation in software development and problem-solving.
+                    </p>
+                    <a href="dilmi-abderrahmane.html" class="member-link inline-flex items-center gap-2">
+                        View Profile →
+                    </a>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="team-card rounded-lg p-8">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full mb-4 overflow-hidden">
+                            <img src="./assets/BELHIMER.jpg" alt="BELHIMER Mohamed Ayoub" class="w-full h-full object-cover">
+                        </div>
+                        <h2 class="text-2xl font-bold text-white mb-2">BELHIMER Mohamed Ayoub</h2>
+                        <p class="text-slate-400 text-sm">ENSIA Student</p>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                        Click to view full profile and technical skills.
+                    </p>
+                    <a href="belhimer-mohamed-ayoub.html" class="member-link inline-flex items-center gap-2">
+                        View Profile →
+                    </a>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="team-card rounded-lg p-8">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-full mb-4 overflow-hidden">
+                           <img src="./assets/Raoua.jpeg" alt="Raoua Nouioua" class="w-full h-full object-cover">
+                        </div>
+                        <h2 class="text-2xl font-bold text-white mb-2">Nouioua Raoua</h2>
+                        <p class="text-slate-400 text-sm">Software Engineer</p>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                        Click to view full profile and technical skills.
+                    </p>
+                    <a href="nouioua-raoua.html" class="member-link inline-flex items-center gap-2">
+                        View Profile →
+                    </a>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="team-card rounded-lg p-8">
+                    <div class="mb-6">
+                        <div class="relative w-16 h-16 mb-4">
+                           <div class="absolute inset-0 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full"></div>
+                           <img src="assets/randa.jpg" alt="Randa Markhoufa" class="relative w-16 h-16 rounded-full object-cover">
+                          </div>
+
+                        <h2 class="text-2xl font-bold text-white mb-2">Markhoufa Randa</h2>
+                        <p class="text-slate-400 text-sm">Software Engineer</p>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                        Click to view full profile and technical skills.
+                    </p>
+                    <a href="markhoufa-randa.html" class="member-link inline-flex items-center gap-2">
+                        View Profile →
+                    </a>
+                </div>
+
+                <!-- Member 5 -->
+                <div class="team-card rounded-lg p-8">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full mb-4 overflow-hidden">
+                            <img src="./assets/youcechouki.png" alt="Chouki youcef" class="w-full h-full object-cover">
+                        </div>
+                        <h2 class="text-2xl font-bold text-white mb-2">Youcef Chouki</h2>
+                        <p class="text-slate-400 text-sm">Software Engineer</p>
+                    </div>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                       View full profile and technical skills
+                    </p>
+                    
+                    <a href="chouki-youcef.html" class="member-link inline-flex items-center gap-2">
+                        View Profile →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="border-t border-slate-700 pt-8 text-center text-slate-500">
+                <p>&copy; 2025 ENSIA Team Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
